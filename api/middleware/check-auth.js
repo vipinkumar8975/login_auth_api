@@ -6,7 +6,7 @@ module.exports.checkAuth = (req,res,next)=>{
         console.log(token);
         const verify = jwt.verify(token,'this is dummy text');
         console.log(verify);
-        next();
+         next();
     }
     catch{
         return res.status(401).json({

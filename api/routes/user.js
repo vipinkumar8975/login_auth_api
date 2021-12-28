@@ -75,7 +75,7 @@ router.post('/login',(req,res,next)=>{
                     msg: 'password not matching'
                 })
             }
-            if(result){
+            if(result) {
                const token = jwt.sign({
                    username: user[0].username,
                    userType: user[0].userType,
